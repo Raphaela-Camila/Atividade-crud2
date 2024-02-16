@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+    <div class="geral">
+        <h3>Cadastrar</h3>
+            <label>CPF:</label>
+            <input type="text" id="cpfCadastro">
+            <br>
+            <label>Nome:</label>
+            <input type="text" id="nome">
+            <br>
+            <label>Idade:</label>
+            <input type="text" id="idade">
+            <br>
+            <a href="index3.html" onclick="enviarDados()" value="Enviar">Enviar</a>
+            <br>
+    </div>
+
+    <div class="link">
+        <a href="put.html">ATUALIZAR</a>
+        <a href="index.html">VER CADASTRO</a>
+        <a href="post.html">CADASTRAR</a>
+        <a href="delete.html">DELETE</a>
+    </div>
+
+        <script>
+            //POST
+        function enviarDados(){
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const cpf = document.getElementById('cpfCadastro').value;
+
+            fetch('pessoas',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nome: nome, idade: idade, cpf: cpf})
+            })
+            .then(response => response.json())
+            .then(data => {
+            
+                // limpa os inputs do formulário
+                document.getElementById('nome').value = '';
+                document.getElementById('idade').value = '';
+                document.getElementById('cpfCadastro').value = '';
+            });
+        }
+
+    </script>
+</center>
+</body>
+</html>
