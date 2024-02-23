@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <h1>Formulário Cinemark</h1>
+    <hr>
+        <div class="login">
+            <h2>LOGIN</h2>
+            <br>
+            <label>Email</label>
+            <input type="text" id="email">
+            <br>
+            <label>Senha:</label>
+            <input type="text" id="senha">
+
+            <input type="button" onclick="login()" value="Entrar">
+        </div>
+    
+        <div class="link">
+            <a href="index.html">VER CADASTRO</a>
+            <a href="post.html">CADASTRAR</a>
+            <a href="login.html">DELETE</a>
+            <a href="login.html">ATUALIZAR</a>
+        </div>
+    </center>
+
+    <script>
+        function login() {
+            var nome = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+
+            if(nome === 'raphaelacamila@gmail.com' & senha === '123'){
+                window.location.href = '/put.html'; 
+            }else{
+                window.location.href = '/index.html';
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

@@ -9,6 +9,7 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-image: url(fundo2.jpg);
     background-size: 100%;
+
 }
 form {
     max-width: 400px;
@@ -85,4 +86,13 @@ a:hover {
     background-color: #dfd8d8de;
     color: #632626;
 }
-  
+.login{
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 110px;
+}
